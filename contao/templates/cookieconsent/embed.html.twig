@@ -1,0 +1,13 @@
+{#
+  Placeholder of embedded content (video, map, post …) until consent. The
+  iframe itself follows in a <template> and is shown by the consent script.
+  service: name, provider, purpose, privacy_url; texts: all texts of the language.
+#}
+<div class="ncc-embed__note">
+  <p class="ncc-embed__text">{{ texts.embed_text|replace({'{name}': service.name, '{provider}': service.provider}) }}</p>
+  <p class="ncc-embed__actions">
+    <button type="button" class="ncc__btn" data-ncc-embed-load>{{ texts.embed_load }}</button>
+    <button type="button" class="ncc__btn ncc__btn--ghost" data-ncc-embed-always>{{ texts.embed_always|replace({'{name}': service.name}) }}</button>
+  </p>
+  {% if service.privacy_url %}<p class="ncc-embed__privacy"><a href="{{ service.privacy_url }}" target="_blank" rel="noopener">{{ service.privacy_label }}: {{ service.name }}</a></p>{% endif %}
+</div>

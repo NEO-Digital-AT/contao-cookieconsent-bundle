@@ -1,0 +1,45 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['new'] = ['New language', 'Add texts for a language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['edit'] = ['Edit', 'Edit the texts.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['delete'] = ['Delete', 'Delete the texts.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['show'] = ['Details', 'Show the details.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['back_to_services'] = ['Services', 'Back to the services.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language_legend'] = 'Language';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_legend'] = 'First layer';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_legend'] = 'Settings';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['buttons_legend'] = 'Buttons';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['categories_legend'] = 'Categories';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_legend'] = 'Embedded content';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['links_legend'] = 'Links';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language'] = ['Language', 'The texts apply to pages in this language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_title'] = ['Heading', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_text'] = ['Text', '{services} lists the categories with their services, {transfer} adds the sentence about transfers to third countries. Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_title'] = ['Heading of the settings', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_text'] = ['Text of the settings', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['services_toggle'] = ['Show services', '{count} is the number of services. Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['consent_id'] = ['Consent ID', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_accept'] = ['Button "Accept all"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_necessary'] = ['Button "Necessary only"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_settings'] = ['Button "Settings"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_save'] = ['Button "Save choice"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_back'] = ['Button "Back"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['reopen'] = ['Cookie settings', 'Label of the button to reopen and of the insert tag. Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary'] = ['Necessary', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary_desc'] = ['Description "Necessary"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional'] = ['Functional', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional_desc'] = ['Description "Functional"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics'] = ['Statistics', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics_desc'] = ['Description "Statistics"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing'] = ['Marketing', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing_desc'] = ['Description "Marketing"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_text'] = ['Placeholder', '{name} is the service, {provider} the provider. Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_load'] = ['Button "Load content"', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_always'] = ['Button "Always allow"', '{name} is the service. Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['privacy_page'] = ['Privacy policy of this language', 'Page for websites in this language. Empty = page from the settings.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['imprint_page'] = ['Legal notice of this language', 'Page for websites in this language. Empty = page from the settings.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_privacy'] = ['Link to the privacy policy', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_imprint'] = ['Link to the legal notice', 'Empty = default of the language.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['defaults_only'] = 'defaults only';

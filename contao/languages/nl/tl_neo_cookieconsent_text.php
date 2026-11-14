@@ -1,0 +1,45 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['new'] = ['Nieuwe taal', 'Teksten voor een taal toevoegen.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['edit'] = ['Bewerken', 'De teksten bewerken.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['delete'] = ['Verwijderen', 'De teksten verwijderen.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['show'] = ['Details', 'De details tonen.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['back_to_services'] = ['Diensten', 'Terug naar de diensten.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language_legend'] = 'Taal';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_legend'] = 'Eerste laag';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_legend'] = 'Instellingen';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['buttons_legend'] = 'Knoppen';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['categories_legend'] = 'Categorieën';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_legend'] = 'Ingesloten inhoud';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['links_legend'] = 'Links';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language'] = ['Taal', 'De teksten gelden voor pagina’s in deze taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_title'] = ['Kop', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_text'] = ['Tekst', '{services} somt de categorieën met hun diensten op, {transfer} voegt de zin over doorgifte naar derde landen toe. Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_title'] = ['Kop van de instellingen', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_text'] = ['Tekst van de instellingen', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['services_toggle'] = ['Diensten tonen', '{count} is het aantal diensten. Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['consent_id'] = ['Toestemmings-ID', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_accept'] = ['Knop “Alles accepteren”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_necessary'] = ['Knop “Alleen noodzakelijke”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_settings'] = ['Knop “Instellingen”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_save'] = ['Knop “Keuze opslaan”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_back'] = ['Knop “Terug”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['reopen'] = ['Cookie-instellingen', 'Opschrift van de knop om opnieuw te openen en van de insert-tag. Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary'] = ['Noodzakelijk', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary_desc'] = ['Beschrijving “Noodzakelijk”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional'] = ['Functioneel', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional_desc'] = ['Beschrijving “Functioneel”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics'] = ['Statistieken', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics_desc'] = ['Beschrijving “Statistieken”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing'] = ['Marketing', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing_desc'] = ['Beschrijving “Marketing”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_text'] = ['Plaatshouder', '{name} is de dienst, {provider} de aanbieder. Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_load'] = ['Knop “Inhoud laden”', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_always'] = ['Knop “Altijd toestaan”', '{name} is de dienst. Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['privacy_page'] = ['Privacyverklaring van deze taal', 'Pagina voor websites in deze taal. Leeg = pagina uit de instellingen.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['imprint_page'] = ['Colofon van deze taal', 'Pagina voor websites in deze taal. Leeg = pagina uit de instellingen.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_privacy'] = ['Link naar de privacyverklaring', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_imprint'] = ['Link naar het colofon', 'Leeg = standaardwaarde van de taal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['defaults_only'] = 'alleen standaardwaarden';

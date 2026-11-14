@@ -1,0 +1,45 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['new'] = ['Nowy język', 'Dodaj teksty dla języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['edit'] = ['Edytuj', 'Edytuj teksty.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['delete'] = ['Usuń', 'Usuń teksty.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['show'] = ['Szczegóły', 'Pokaż szczegóły.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['back_to_services'] = ['Usługi', 'Powrót do usług.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language_legend'] = 'Język';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_legend'] = 'Pierwsza warstwa';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_legend'] = 'Ustawienia';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['buttons_legend'] = 'Przyciski';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['categories_legend'] = 'Kategorie';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_legend'] = 'Osadzone treści';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['links_legend'] = 'Linki';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language'] = ['Język', 'Teksty dotyczą stron w tym języku.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_title'] = ['Nagłówek', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_text'] = ['Tekst', '{services} wymienia kategorie wraz z usługami, {transfer} dodaje zdanie o przekazywaniu danych do państw trzecich. Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_title'] = ['Nagłówek ustawień', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_text'] = ['Tekst ustawień', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['services_toggle'] = ['Pokaż usługi', '{count} to liczba usług. Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['consent_id'] = ['Identyfikator zgody', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_accept'] = ['Przycisk „Akceptuj wszystkie”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_necessary'] = ['Przycisk „Tylko niezbędne”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_settings'] = ['Przycisk „Ustawienia”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_save'] = ['Przycisk „Zapisz wybór”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_back'] = ['Przycisk „Wstecz”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['reopen'] = ['Ustawienia plików cookie', 'Etykieta przycisku ponownego otwarcia i insert tagu. Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary'] = ['Niezbędne', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary_desc'] = ['Opis „Niezbędne”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional'] = ['Funkcjonalne', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional_desc'] = ['Opis „Funkcjonalne”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics'] = ['Statystyczne', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics_desc'] = ['Opis „Statystyczne”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing'] = ['Marketingowe', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing_desc'] = ['Opis „Marketingowe”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_text'] = ['Symbol zastępczy', '{name} to usługa, {provider} to dostawca. Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_load'] = ['Przycisk „Wczytaj treść”', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_always'] = ['Przycisk „Zawsze zezwalaj”', '{name} to usługa. Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['privacy_page'] = ['Polityka prywatności dla tego języka', 'Strona dla witryn w tym języku. Puste = strona z ustawień.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['imprint_page'] = ['Nota prawna dla tego języka', 'Strona dla witryn w tym języku. Puste = strona z ustawień.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_privacy'] = ['Link do polityki prywatności', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_imprint'] = ['Link do noty prawnej', 'Puste = wartość domyślna języka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['defaults_only'] = 'tylko wartości domyślne';

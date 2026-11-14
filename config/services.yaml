@@ -1,0 +1,30 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Neo\CookieconsentBundle\:
+        resource: ../src/
+        exclude:
+            - ../src/DependencyInjection/
+            - ../src/ContaoManager/
+            - ../src/NeoCookieconsentBundle.php
+            - ../src/Catalog/ServiceTemplate.php
+
+    # The scan reads the pages of this website (short timeouts, no redirects to other hosts).
+    neo_cookieconsent.scan_client:
+        class: Symfony\Contracts\HttpClient\HttpClientInterface
+        factory: ['Symfony\Component\HttpClient\HttpClient', 'create']
+        arguments:
+            - { timeout: 10, max_duration: 20, max_redirects: 3, headers: { User-Agent: 'Contao cookie consent scan' } }
+
+    Neo\CookieconsentBundle\Scan\Scanner:
+        arguments:
+            $httpClient: '@neo_cookieconsent.scan_client'
+
+    Neo\CookieconsentBundle\Backend\:
+        resource: ../src/Backend/
+        public: true
+
+    Neo\CookieconsentBundle\Controller\LogController:
+        tags: ['controller.service_arguments']

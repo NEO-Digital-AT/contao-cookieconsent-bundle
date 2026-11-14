@@ -1,0 +1,8 @@
+# The browser reports each choice of a visitor (proof of consent, no IP address).
+neo_cookieconsent_log:
+    path: /api/cookieconsent/log
+    methods: [POST]
+    defaults:
+        _controller: Neo\CookieconsentBundle\Controller\LogController
+        _scope: frontend
+        _token_check: false   # JSON from the consent script, rate-limited, same origin only

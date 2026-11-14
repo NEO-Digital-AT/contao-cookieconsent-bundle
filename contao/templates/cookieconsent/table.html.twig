@@ -1,0 +1,41 @@
+{#
+  Services and cookies for the privacy policy: one table per category. Output
+  of {{cookie_consent::table}} and of the content element "Cookie list".
+  cats: key, label, desc, services (name, provider, purpose, cookies, no_cookies,
+  transfer, privacy_url, privacy_label); labels: column headings; texts: all
+  texts of the language.
+#}
+<div class="ncc-tables">
+  {% for cat in cats %}
+    {# Scrolls sideways on narrow screens: reachable by keyboard, with a name (WCAG 2.1.1). #}
+    <div class="ncc-table-wrap" tabindex="0" role="region" aria-label="{{ cat.label }}">
+      <table class="ncc-table">
+        <caption><strong>{{ cat.label }}</strong> {{ cat.desc }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ labels.service }}</th>
+            <th scope="col">{{ labels.provider }}</th>
+            <th scope="col">{{ labels.purpose }}</th>
+            <th scope="col">{{ labels.cookies }}</th>
+            <th scope="col">{{ labels.transfer }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in cat.services %}
+            <tr>
+              <th scope="row">{{ s.name }}{% if s.privacy_url %}<br><a href="{{ s.privacy_url }}" target="_blank" rel="noopener">{{ s.privacy_label }}</a>{% endif %}</th>
+              <td>{{ s.provider }}</td>
+              <td>{{ s.purpose }}</td>
+              <td>{% if s.cookies is not empty %}{% for c in s.cookies %}<code>{{ c.name }}</code> ({{ c.duration }}){% if not loop.last %}<br>{% endif %}{% endfor %}{% else %}{{ s.no_cookies }}{% endif %}</td>
+              <td>{{ s.transfer ?: '–' }}</td>
+            </tr>
+          {% else %}
+            <tr><td colspan="5">{{ labels.none }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endfor %}
+  <p class="ncc-tables__id" data-ncc-id-row hidden>{{ texts.consent_id }}: <span data-ncc-id></span></p>
+  <p class="ncc-tables__change"><a href="#" role="button" data-ncc-open>{{ labels.change }}</a></p>
+</div>

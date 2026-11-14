@@ -1,0 +1,45 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['new'] = ['Új nyelv', 'Szövegek hozzáadása egy nyelvhez.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['edit'] = ['Szerkesztés', 'A szövegek szerkesztése.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['delete'] = ['Törlés', 'A szövegek törlése.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['show'] = ['Részletek', 'A részletek megjelenítése.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['back_to_services'] = ['Szolgáltatások', 'Vissza a szolgáltatásokhoz.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language_legend'] = 'Nyelv';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_legend'] = 'Első szint';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_legend'] = 'Beállítások';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['buttons_legend'] = 'Gombok';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['categories_legend'] = 'Kategóriák';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_legend'] = 'Beágyazott tartalmak';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['links_legend'] = 'Hivatkozások';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language'] = ['Nyelv', 'A szövegek az ilyen nyelvű oldalakra vonatkoznak.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_title'] = ['Címsor', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_text'] = ['Szöveg', 'A {services} felsorolja a kategóriákat a szolgáltatásaikkal, a {transfer} hozzáadja a harmadik országokba történő továbbításról szóló mondatot. Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_title'] = ['A beállítások címsora', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_text'] = ['A beállítások szövege', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['services_toggle'] = ['Szolgáltatások megjelenítése', 'A {count} a szolgáltatások száma. Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['consent_id'] = ['Hozzájárulási azonosító', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_accept'] = ['„Összes elfogadása” gomb', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_necessary'] = ['„Csak a szükségesek” gomb', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_settings'] = ['„Beállítások” gomb', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_save'] = ['„Választás mentése” gomb', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_back'] = ['„Vissza” gomb', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['reopen'] = ['Sütibeállítások', 'Az újranyitó gomb és az insert tag felirata. Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary'] = ['Szükséges', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary_desc'] = ['„Szükséges” leírása', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional'] = ['Funkcionális', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional_desc'] = ['„Funkcionális” leírása', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics'] = ['Statisztika', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics_desc'] = ['„Statisztika” leírása', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing'] = ['Marketing', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing_desc'] = ['„Marketing” leírása', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_text'] = ['Helyőrző', 'A {name} a szolgáltatás, a {provider} a szolgáltató. Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_load'] = ['„Tartalom betöltése” gomb', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_always'] = ['„Mindig engedélyezem” gomb', 'A {name} a szolgáltatás. Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['privacy_page'] = ['Adatvédelmi tájékoztató ehhez a nyelvhez', 'Oldal az ilyen nyelvű weboldalakhoz. Üres = a beállításokban megadott oldal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['imprint_page'] = ['Impresszum ehhez a nyelvhez', 'Oldal az ilyen nyelvű weboldalakhoz. Üres = a beállításokban megadott oldal.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_privacy'] = ['Hivatkozás az adatvédelmi tájékoztatóra', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_imprint'] = ['Hivatkozás az impresszumra', 'Üres = a nyelv alapértéke.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['defaults_only'] = 'csak alapértékek';

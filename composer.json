@@ -1,0 +1,86 @@
+{
+    "name": "neo-digital/contao-cookieconsent-bundle",
+    "type": "contao-bundle",
+    "description": "Cookie consent for Contao 5: services managed in the back end with templates for common analytics, advertising and embedded services, blocking of scripts and embedded content until consent, proof of consent, a cookie list for the privacy policy and a daily scan that adds services it finds.",
+    "keywords": [
+        "contao-bundle",
+        "contao",
+        "cookie",
+        "consent",
+        "gdpr",
+        "privacy"
+    ],
+    "homepage": "https://github.com/NEO-Digital-AT/contao-cookieconsent-bundle",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "NEO Digital"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/NEO-Digital-AT/contao-cookieconsent-bundle/issues",
+        "source": "https://github.com/NEO-Digital-AT/contao-cookieconsent-bundle"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-ctype": "*",
+        "ext-mbstring": "*",
+        "contao/core-bundle": "^5.3 || ^6.0",
+        "doctrine/dbal": "^3.6 || ^4.0",
+        "neo-digital/contao-basic-bundle": "^1.0",
+        "psr/cache": "^1.0 || ^2.0 || ^3.0",
+        "psr/log": "^1.1 || ^2.0 || ^3.0",
+        "symfony/config": "^6.4 || ^7.0 || ^8.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0 || ^8.0",
+        "symfony/event-dispatcher": "^6.4 || ^7.0 || ^8.0",
+        "symfony/http-client": "^6.4 || ^7.0 || ^8.0",
+        "symfony/http-client-contracts": "^3.0",
+        "symfony/http-foundation": "^6.4 || ^7.0 || ^8.0",
+        "symfony/http-kernel": "^6.4 || ^7.0 || ^8.0",
+        "symfony/mailer": "^6.4 || ^7.0 || ^8.0",
+        "symfony/mime": "^6.4 || ^7.0 || ^8.0",
+        "symfony/rate-limiter": "^6.4 || ^7.0 || ^8.0",
+        "symfony/routing": "^6.4 || ^7.0 || ^8.0",
+        "symfony/security-bundle": "^6.4 || ^7.0 || ^8.0",
+        "symfony/security-csrf": "^6.4 || ^7.0 || ^8.0",
+        "symfony/translation-contracts": "^3.0",
+        "twig/twig": "^3.8"
+    },
+    "require-dev": {
+        "ext-pdo_sqlite": "*",
+        "contao/manager-plugin": "^2.0",
+        "phpunit/phpunit": "^10.5 || ^11.5",
+        "symfony/cache": "^6.4 || ^7.0 || ^8.0",
+        "symfony/translation": "^6.4 || ^7.0 || ^8.0",
+        "symfony/yaml": "^6.4 || ^7.0 || ^8.0"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neo\\CookieconsentBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neo\\CookieconsentBundle\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        },
+        "contao-manager-plugin": "Neo\\CookieconsentBundle\\ContaoManager\\Plugin"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "php-http/discovery": false
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

@@ -1,0 +1,262 @@
+/*
+ * Cookie consent: neutral default design. Every colour, size and position is a
+ * CSS variable; a website overrides them in its own stylesheet, e.g.
+ *   :root { --ncc-accent: #0b5cad; --ncc-radius: 4px; }
+ * The defaults sit on :where(:root) (no specificity), so the website wins
+ * whichever stylesheet loads first.
+ * Defaults meet WCAG 2.1 AA (text 4.5:1, controls 3:1).
+ */
+:where(:root) {
+  --ncc-font: inherit;
+  --ncc-font-size: 15px;
+  --ncc-bg: #ffffff;
+  --ncc-text: #1f2328;
+  --ncc-muted: #57606a;
+  --ncc-line: #d0d7de;
+  --ncc-accent: #1f5fad;
+  --ncc-accent-text: #ffffff;
+  --ncc-ghost-bg: transparent;
+  --ncc-ghost-text: #1f2328;
+  --ncc-ghost-border: #8c959f;
+  --ncc-switch-off: #8c959f;
+  --ncc-switch-on: #1f5fad;
+  --ncc-focus: #1f5fad;
+  --ncc-radius: 8px;
+  --ncc-radius-button: 6px;
+  --ncc-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  --ncc-max-width: 1100px;
+  --ncc-center-width: 560px;
+  --ncc-drawer-width: 420px;
+  --ncc-drawer-radius: 0;
+  --ncc-overlay: rgba(0, 0, 0, 0.45);
+  --ncc-offset: 16px;
+  --ncc-z: 2147483000;
+  --ncc-reopen-size: 44px;
+  --ncc-reopen-bg: #ffffff;
+  --ncc-reopen-text: #1f2328;
+  --ncc-embed-bg: #f6f8fa;
+  --ncc-embed-text: #1f2328;
+}
+
+.ncc,
+.ncc *,
+.ncc-embed,
+.ncc-embed * { box-sizing: border-box; }
+
+.ncc {
+  position: fixed;
+  z-index: var(--ncc-z);
+  font-family: var(--ncc-font);
+  font-size: var(--ncc-font-size);
+  line-height: 1.5;
+  color: var(--ncc-text);
+  pointer-events: none;
+}
+.ncc[hidden] { display: none; }
+
+/* Bars at the bottom and the top */
+.ncc--bottom,
+.ncc--top { left: var(--ncc-offset); right: var(--ncc-offset); }
+.ncc--bottom { bottom: var(--ncc-offset); }
+.ncc--top { top: var(--ncc-offset); }
+.ncc--bottom .ncc__panel,
+.ncc--top .ncc__panel { margin: 0 auto; max-width: var(--ncc-max-width); }
+
+/* Dialog in the centre */
+.ncc--center { inset: 0; display: grid; place-items: center; padding: var(--ncc-offset); }
+.ncc--center .ncc__panel { width: min(var(--ncc-center-width), 100%); }
+
+/* Side panels at full height */
+.ncc--left,
+.ncc--right { top: 0; bottom: 0; width: min(var(--ncc-drawer-width), 100vw); }
+.ncc--left { left: 0; }
+.ncc--right { right: 0; }
+.ncc--left .ncc__panel,
+.ncc--right .ncc__panel { height: 100%; max-height: none; border-radius: var(--ncc-drawer-radius); }
+
+/* Dimmed background */
+.ncc--overlay { inset: 0; }
+.ncc--overlay.ncc--bottom .ncc__panel,
+.ncc--overlay.ncc--top .ncc__panel { position: absolute; left: var(--ncc-offset); right: var(--ncc-offset); }
+.ncc--overlay.ncc--bottom .ncc__panel { bottom: var(--ncc-offset); }
+.ncc--overlay.ncc--top .ncc__panel { top: var(--ncc-offset); }
+.ncc--overlay.ncc--left .ncc__panel,
+.ncc--overlay.ncc--right .ncc__panel { position: absolute; top: 0; bottom: 0; width: min(var(--ncc-drawer-width), 100vw); }
+.ncc--overlay.ncc--left .ncc__panel { left: 0; }
+.ncc--overlay.ncc--right .ncc__panel { right: 0; }
+.ncc--overlay.ncc--left,
+.ncc--overlay.ncc--right { width: auto; }
+.ncc__backdrop { position: absolute; inset: 0; background: var(--ncc-overlay); pointer-events: auto; }
+.ncc-modal-open,
+.ncc-modal-open body { overflow: hidden; }
+
+.ncc__panel {
+  position: relative; /* above the backdrop of the overlay */
+  pointer-events: auto;
+  background: var(--ncc-bg);
+  color: var(--ncc-text);
+  border: 1px solid var(--ncc-line);
+  border-radius: var(--ncc-radius);
+  box-shadow: var(--ncc-shadow);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: calc(100vh - 2 * var(--ncc-offset));
+  max-height: calc(100dvh - 2 * var(--ncc-offset));
+  overflow: auto;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.ncc--top .ncc__panel { transform: translateY(-12px); }
+.ncc--left .ncc__panel { transform: translateX(-12px); }
+.ncc--right .ncc__panel { transform: translateX(12px); }
+.ncc--center .ncc__panel { transform: scale(0.98); }
+.ncc.is-open .ncc__panel { opacity: 1; transform: none; }
+/* The panel takes the focus when it opens (tabindex -1) but is not a control
+   itself: no frame around the whole banner; its buttons and links show it. */
+.ncc__panel:focus,
+.ncc__panel:focus-visible { outline: none; }
+
+.ncc__title { margin: 0; font-size: 1.15em; line-height: 1.3; font-weight: 700; color: var(--ncc-text); }
+.ncc__text { margin: 0; color: var(--ncc-text); }
+.ncc__body { display: flex; flex-direction: column; gap: 10px; }
+.ncc__body [data-ncc-view="settings"] { display: flex; flex-direction: column; gap: 10px; }
+.ncc__body [data-ncc-view="settings"][hidden] { display: none; }
+
+.ncc__cats { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.ncc__cat { border-top: 1px solid var(--ncc-line); padding: 10px 0; display: flex; flex-direction: column; gap: 4px; }
+.ncc__cat-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.ncc__cat-label { font-weight: 600; }
+.ncc__cat-desc { margin: 0; color: var(--ncc-muted); font-size: 0.93em; }
+
+.ncc__switch {
+  flex: none;
+  position: relative;
+  width: 44px;
+  height: 26px;
+  border-radius: 13px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: var(--ncc-switch-off);
+  cursor: pointer;
+}
+.ncc__switch[aria-checked="true"] { background: var(--ncc-switch-on); }
+.ncc__switch:disabled { cursor: not-allowed; opacity: 0.75; }
+.ncc__knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 0.15s ease;
+}
+.ncc__switch[aria-checked="true"] .ncc__knob { transform: translateX(18px); }
+
+.ncc__services summary { cursor: pointer; color: var(--ncc-accent); font-size: 0.93em; padding: 2px 0; }
+.ncc__service-list { margin: 6px 0 0; display: grid; gap: 4px 0; font-size: 0.9em; }
+.ncc__service-list dt { font-weight: 600; margin-top: 6px; }
+.ncc__service-list dd { margin: 0; display: flex; flex-direction: column; gap: 2px; color: var(--ncc-muted); }
+.ncc__service-list code { font-size: 0.95em; color: var(--ncc-text); }
+.ncc__service-list a,
+.ncc__links a { color: var(--ncc-accent); text-decoration: underline; }
+.ncc__id { margin: 0; font-size: 0.85em; color: var(--ncc-muted); overflow-wrap: anywhere; }
+
+.ncc__actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.ncc__actions[hidden] { display: none; }
+.ncc__actions .ncc__btn--ghost { margin-right: auto; }
+.ncc__btn {
+  font: inherit;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 9px 18px;
+  border-radius: var(--ncc-radius-button);
+  border: 2px solid var(--ncc-accent);
+  background: var(--ncc-accent);
+  color: var(--ncc-accent-text);
+  cursor: pointer;
+  line-height: 1.2;
+}
+.ncc__btn--ghost { background: var(--ncc-ghost-bg); color: var(--ncc-ghost-text); border-color: var(--ncc-ghost-border); }
+.ncc__btn:focus-visible,
+.ncc__switch:focus-visible,
+.ncc__services summary:focus-visible,
+.ncc a:focus-visible,
+.ncc-reopen:focus-visible,
+.ncc-embed a:focus-visible { outline: 3px solid var(--ncc-focus); outline-offset: 2px; }
+.ncc__links { margin: 0; display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.88em; }
+
+@media (max-width: 640px) {
+  .ncc--bottom:not(.ncc--overlay),
+  .ncc--top:not(.ncc--overlay) { left: 8px; right: 8px; }
+  .ncc--bottom:not(.ncc--overlay) { bottom: 8px; }
+  .ncc--top:not(.ncc--overlay) { top: 8px; }
+  .ncc--overlay.ncc--bottom .ncc__panel,
+  .ncc--overlay.ncc--top .ncc__panel { left: 8px; right: 8px; }
+  .ncc--overlay.ncc--bottom .ncc__panel { bottom: 8px; }
+  .ncc--overlay.ncc--top .ncc__panel { top: 8px; }
+  .ncc__actions { flex-direction: column; align-items: stretch; }
+  .ncc__actions .ncc__btn--ghost { margin-right: 0; }
+}
+
+.ncc-reopen {
+  position: fixed;
+  z-index: var(--ncc-z);
+  /* --neo-dock-x/-y: moved by the buttons at the edge of the screen of NEO Basic (stacked buttons). */
+  bottom: calc(var(--ncc-offset) + var(--neo-dock-y, 0px));
+  width: var(--ncc-reopen-size);
+  height: var(--ncc-reopen-size);
+  border-radius: 50%;
+  border: 1px solid var(--ncc-line);
+  background: var(--ncc-reopen-bg);
+  color: var(--ncc-reopen-text);
+  box-shadow: var(--ncc-shadow);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+.ncc-reopen[hidden] { display: none; }
+.ncc-reopen--left { left: calc(var(--ncc-offset) + var(--neo-dock-x, 0px)); }
+.ncc-reopen--right { right: calc(var(--ncc-offset) + var(--neo-dock-x, 0px)); }
+
+.ncc-embed {
+  position: relative;
+  width: 100%;
+  background: var(--ncc-embed-bg);
+  color: var(--ncc-embed-text);
+  border: 1px solid var(--ncc-line);
+  border-radius: var(--ncc-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: var(--ncc-font);
+  font-size: var(--ncc-font-size);
+  line-height: 1.5;
+}
+.ncc-embed__note { max-width: 520px; display: flex; flex-direction: column; gap: 10px; text-align: center; }
+.ncc-embed__note p { margin: 0; }
+.ncc-embed__actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.ncc-embed__privacy { font-size: 0.88em; }
+.ncc-embed__privacy a { color: var(--ncc-accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ncc__panel,
+  .ncc__knob { transition: none; }
+}
+
+/* Tables for the privacy policy ({{cookie_consent::table}}, content element "Cookie list") */
+.ncc-tables { display: flex; flex-direction: column; gap: 1.5em; }
+.ncc-table-wrap { overflow-x: auto; }
+.ncc-table-wrap:focus-visible { outline: 3px solid var(--ncc-focus); outline-offset: 2px; }
+.ncc-table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+.ncc-table caption { text-align: left; padding: 0 0 0.5em; }
+.ncc-table th,
+.ncc-table td { text-align: left; vertical-align: top; padding: 0.5em 0.75em; border: 1px solid var(--ncc-table-line, #d0d7de); }
+.ncc-table thead th { background: var(--ncc-table-head-bg, #f6f8fa); }
+.ncc-table code { white-space: nowrap; }

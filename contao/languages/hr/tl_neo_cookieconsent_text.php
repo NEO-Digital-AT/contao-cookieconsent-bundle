@@ -1,0 +1,45 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['new'] = ['Novi jezik', 'Dodaj tekstove za jezik.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['edit'] = ['Uredi', 'Uredi tekstove.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['delete'] = ['Izbriši', 'Izbriši tekstove.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['show'] = ['Pojedinosti', 'Prikaži pojedinosti.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['back_to_services'] = ['Usluge', 'Natrag na usluge.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language_legend'] = 'Jezik';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_legend'] = 'Prva razina';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_legend'] = 'Postavke';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['buttons_legend'] = 'Gumbi';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['categories_legend'] = 'Kategorije';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_legend'] = 'Ugrađeni sadržaji';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['links_legend'] = 'Poveznice';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language'] = ['Jezik', 'Tekstovi vrijede za stranice na ovom jeziku.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_title'] = ['Naslov', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_text'] = ['Tekst', '{services} navodi kategorije s njihovim uslugama, {transfer} dodaje rečenicu o prijenosu u treće zemlje. Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_title'] = ['Naslov postavki', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_text'] = ['Tekst postavki', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['services_toggle'] = ['Prikaži usluge', '{count} je broj usluga. Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['consent_id'] = ['ID privole', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_accept'] = ['Gumb „Prihvati sve“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_necessary'] = ['Gumb „Samo nužni“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_settings'] = ['Gumb „Postavke“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_save'] = ['Gumb „Spremi odabir“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_back'] = ['Gumb „Natrag“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['reopen'] = ['Postavke kolačića', 'Natpis gumba za ponovno otvaranje i insert taga. Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary'] = ['Nužni', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary_desc'] = ['Opis „Nužni“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional'] = ['Funkcionalni', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional_desc'] = ['Opis „Funkcionalni“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics'] = ['Statistički', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics_desc'] = ['Opis „Statistički“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing'] = ['Marketinški', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing_desc'] = ['Opis „Marketinški“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_text'] = ['Rezervirano mjesto', '{name} je usluga, {provider} pružatelj. Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_load'] = ['Gumb „Učitaj sadržaj“', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_always'] = ['Gumb „Uvijek dopusti“', '{name} je usluga. Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['privacy_page'] = ['Pravila privatnosti za ovaj jezik', 'Stranica za web-stranice na ovom jeziku. Prazno = stranica iz postavki.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['imprint_page'] = ['Impresum za ovaj jezik', 'Stranica za web-stranice na ovom jeziku. Prazno = stranica iz postavki.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_privacy'] = ['Poveznica na pravila privatnosti', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_imprint'] = ['Poveznica na impresum', 'Prazno = zadana vrijednost jezika.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['defaults_only'] = 'samo zadane vrijednosti';

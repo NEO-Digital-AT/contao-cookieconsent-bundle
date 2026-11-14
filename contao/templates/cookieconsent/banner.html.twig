@@ -1,0 +1,87 @@
+{#
+  Cookie banner: first layer (text and three equal buttons) and second layer
+  (categories with switches and the services behind them). Behaviour in
+  consent.js; look in consent.css via the --ncc-* variables.
+
+  "Only necessary" and "Accept all" are equal on purpose (same class, same
+  level): refusing must be as easy as agreeing. The order in the markup is the
+  order on screen on every width, so the tab order matches what one sees.
+#}
+{% set t = texts %}
+<div class="ncc ncc--{{ position }}{{ overlay ? ' ncc--overlay' : '' }}" data-ncc hidden>
+  {% if overlay %}<div class="ncc__backdrop" aria-hidden="true"></div>{% endif %}
+  <div class="ncc__panel" role="dialog" aria-modal="{{ overlay ? 'true' : 'false' }}" aria-labelledby="ncc-title" tabindex="-1" data-ncc-panel>
+    <h2 class="ncc__title" id="ncc-title">
+      <span data-ncc-view="banner">{{ t.banner_title }}</span>
+      <span data-ncc-view="settings" hidden>{{ t.settings_title }}</span>
+    </h2>
+
+    <div class="ncc__body">
+      <p class="ncc__text" data-ncc-view="banner">{{ banner_text }}</p>
+
+      <div data-ncc-view="settings" hidden>
+        <p class="ncc__text">{{ t.settings_text }}</p>
+        <ul class="ncc__cats">
+          {% for cat in cats %}
+            <li class="ncc__cat">
+              <div class="ncc__cat-head">
+                <span class="ncc__cat-label" id="ncc-cat-{{ cat.key }}">{{ cat.label }}</span>
+                <button type="button" class="ncc__switch" role="switch" data-ncc-cat="{{ cat.key }}" aria-labelledby="ncc-cat-{{ cat.key }}" aria-describedby="ncc-cat-{{ cat.key }}-desc" aria-checked="{{ cat.key == 'necessary' ? 'true' : 'false' }}"{% if cat.key == 'necessary' %} disabled{% endif %}><span class="ncc__knob" aria-hidden="true"></span></button>
+              </div>
+              <p class="ncc__cat-desc" id="ncc-cat-{{ cat.key }}-desc">{{ cat.desc }}</p>
+              {% if cat.services is not empty %}
+                <details class="ncc__services">
+                  <summary>{{ t.services_toggle|replace({'{count}': cat.services|length}) }}</summary>
+                  <dl class="ncc__service-list">
+                    {% for s in cat.services %}
+                      <dt>{{ s.name }}</dt>
+                      <dd>
+                        <span class="ncc__provider">{{ s.provider }}</span>
+                        {% if s.purpose %}<span>{{ s.purpose }}</span>{% endif %}
+                        {% if s.cookies is not empty %}<span class="ncc__cookies">{% for c in s.cookies %}<code>{{ c.name }}</code> {{ c.duration }}{% if not loop.last %}, {% endif %}{% endfor %}</span>{% elseif s.no_cookies %}<span class="ncc__cookies">{{ s.no_cookies }}</span>{% endif %}
+                        {% if s.transfer %}<span>{{ s.transfer }}</span>{% endif %}
+                        {% if s.privacy_url %}<a href="{{ s.privacy_url }}" target="_blank" rel="noopener">{{ s.privacy_label }}</a>{% endif %}
+                      </dd>
+                    {% endfor %}
+                  </dl>
+                </details>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="ncc__id" data-ncc-id-row hidden>{{ t.consent_id }}: <span data-ncc-id></span></p>
+      </div>
+    </div>
+
+    <div class="ncc__actions" data-ncc-view="banner">
+      <button type="button" class="ncc__btn ncc__btn--ghost" data-ncc-action="settings">{{ t.btn_settings }}</button>
+      <button type="button" class="ncc__btn" data-ncc-action="necessary">{{ t.btn_necessary }}</button>
+      <button type="button" class="ncc__btn" data-ncc-action="accept">{{ t.btn_accept }}</button>
+    </div>
+    <div class="ncc__actions" data-ncc-view="settings" hidden>
+      <button type="button" class="ncc__btn ncc__btn--ghost" data-ncc-action="back">{{ t.btn_back }}</button>
+      <button type="button" class="ncc__btn" data-ncc-action="save">{{ t.btn_save }}</button>
+      <button type="button" class="ncc__btn" data-ncc-action="accept">{{ t.btn_accept }}</button>
+    </div>
+
+    {% if privacy_url or imprint_url %}
+      <p class="ncc__links">
+        {% if privacy_url %}<a href="{{ privacy_url }}">{{ t.link_privacy }}</a>{% endif %}
+        {% if imprint_url %}<a href="{{ imprint_url }}">{{ t.link_imprint }}</a>{% endif %}
+      </p>
+    {% endif %}
+  </div>
+</div>
+{% if reopen != 'none' %}
+  {#
+    Button to reopen the settings, shown once the visitor has chosen. It takes
+    part in the buttons at the edge of the screen of NEO Basic (data-neo-dock-*):
+    with buttons of other extensions in the same corner (accessibility, chat)
+    it becomes an entry of one settings button with a menu, or is stacked with
+    them, as set in the page layout. Keep data-ncc-reopen and the data-neo-dock
+    attributes; the icon of the menu entry is the one marked data-neo-dock-icon.
+  #}
+  <button type="button" class="ncc-reopen ncc-reopen--{{ reopen }}" data-ncc-open data-ncc-reopen data-neo-dock="cookies" data-neo-dock-launcher data-neo-dock-corner="bottom-{{ reopen }}" data-neo-dock-order="30" data-neo-dock-label="{{ t.reopen }}" aria-label="{{ t.reopen }}" title="{{ t.reopen }}" hidden>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false" data-neo-dock-icon><path d="M21 12.8A9 9 0 1 1 11.2 3a4 4 0 0 0 5 5 4 4 0 0 0 4.8 4.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.5" cy="10.5" r="1.2" fill="currentColor"/><circle cx="12" cy="15.5" r="1.2" fill="currentColor"/><circle cx="16" cy="12.5" r="1" fill="currentColor"/></svg>
+  </button>
+{% endif %}

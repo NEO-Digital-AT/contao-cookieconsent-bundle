@@ -1,0 +1,9 @@
+{#
+  First script of the page: the consent state from the browser and the
+  interface for other scripts (window.cookieConsent), before anything else
+  runs. "categories" lists what the banner asks for: a script that needs
+  another category knows that it will never be allowed. With Google services
+  the default of Google Consent Mode v2 is set here (everything denied),
+  before any Google tag can load.
+#}
+<script id="ncc-head">(function(){var K="ncc-consent",V={{ config.v|json_encode|raw }},s=null;try{s=JSON.parse(localStorage.getItem(K)||"null")}catch(e){}if(s&&s.v!==V){s=null}var c=window.cookieConsent=window.cookieConsent||{};c.version=V;c.categories={{ config.cats|json_encode|raw }};c.state=s;c.allows=function(k){return k==="necessary"||!!(c.state&&c.state.cats&&c.state.cats[k])};c.allowsService=function(k,cat){return c.allows(cat)||!!(c.state&&c.state.svc&&c.state.svc[k])};c.open=c.open||function(){(c._q=c._q||[]).push("open")};{% if config.consentMode %}window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments)};var g=function(k){return c.allows(k)?"granted":"denied"};gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",functionality_storage:"denied",personalization_storage:"denied",security_storage:"granted",wait_for_update:500});gtag("set","ads_data_redaction",true);gtag("set","url_passthrough",true);if(s){gtag("consent","update",{ad_storage:g("marketing"),ad_user_data:g("marketing"),ad_personalization:g("marketing"),analytics_storage:g("statistics"),functionality_storage:g("functional"),personalization_storage:g("functional")});gtag("set","ads_data_redaction",!c.allows("marketing"))}{% endif %}})();</script>

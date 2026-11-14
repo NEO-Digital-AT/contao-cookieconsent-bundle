@@ -1,0 +1,45 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['new'] = ['Nový jazyk', 'Přidat texty pro jazyk.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['edit'] = ['Upravit', 'Upravit texty.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['delete'] = ['Smazat', 'Smazat texty.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['show'] = ['Podrobnosti', 'Zobrazit podrobnosti.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['back_to_services'] = ['Služby', 'Zpět ke službám.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language_legend'] = 'Jazyk';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_legend'] = 'První úroveň';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_legend'] = 'Nastavení';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['buttons_legend'] = 'Tlačítka';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['categories_legend'] = 'Kategorie';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_legend'] = 'Vložený obsah';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['links_legend'] = 'Odkazy';
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['language'] = ['Jazyk', 'Texty platí pro stránky v tomto jazyce.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_title'] = ['Nadpis', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['banner_text'] = ['Text', '{services} vypíše kategorie s jejich službami, {transfer} doplní větu o předávání do třetích zemí. Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_title'] = ['Nadpis nastavení', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['settings_text'] = ['Text nastavení', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['services_toggle'] = ['Zobrazit služby', '{count} je počet služeb. Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['consent_id'] = ['ID souhlasu', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_accept'] = ['Tlačítko „Přijmout vše“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_necessary'] = ['Tlačítko „Pouze nezbytné“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_settings'] = ['Tlačítko „Nastavení“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_save'] = ['Tlačítko „Uložit výběr“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['btn_back'] = ['Tlačítko „Zpět“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['reopen'] = ['Nastavení cookies', 'Popisek tlačítka pro opětovné otevření a insert tagu. Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary'] = ['Nezbytné', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_necessary_desc'] = ['Popis „Nezbytné“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional'] = ['Funkční', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_functional_desc'] = ['Popis „Funkční“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics'] = ['Statistické', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_statistics_desc'] = ['Popis „Statistické“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing'] = ['Marketingové', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['cat_marketing_desc'] = ['Popis „Marketingové“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_text'] = ['Zástupný prvek', '{name} je služba, {provider} poskytovatel. Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_load'] = ['Tlačítko „Načíst obsah“', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['embed_always'] = ['Tlačítko „Vždy povolit“', '{name} je služba. Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['privacy_page'] = ['Zásady ochrany osobních údajů pro tento jazyk', 'Stránka pro weby v tomto jazyce. Prázdné = stránka z nastavení.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['imprint_page'] = ['Právní upozornění pro tento jazyk', 'Stránka pro weby v tomto jazyce. Prázdné = stránka z nastavení.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_privacy'] = ['Odkaz na zásady ochrany osobních údajů', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['link_imprint'] = ['Odkaz na právní upozornění', 'Prázdné = výchozí hodnota jazyka.'];
+$GLOBALS['TL_LANG']['tl_neo_cookieconsent_text']['defaults_only'] = 'pouze výchozí hodnoty';
